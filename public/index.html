@@ -24,22 +24,29 @@
 <body>
 	<main>
 		<div class="contianer">
-			<div class="row justify-content-center my-4">
-				<div class="video-frame">
+			<div class="row video-container justify-content-center my-4">
+				<div class="video-frame mx-2 border border-dark">
 					<video controls class="w-100 h-100"></video>
 				</div>
-				<div class="video-frame">
+				<div class="video-frame mx-2 border border-dark">
 					<video class="js-video w-100 h-100" controls></video>
 				</div>
 			</div>
 			<!-- Buttons -->
 			<div class="row">
-				<div class="btn-group mx-auto">
-					<button id="action" class='js-record btn btn-danger'>Record</button>
-					<button class='btn btn-default js-stop'">Stop Recording</button>
+				<div class=" mx-auto">
+					<div class="input-group mb-3">
+						<div class="input-group-text">
+							<input type="checkbox" onclick="checkDesktop()" aria-label="Checkbox for following text input">
+						</div>
+					</div>
+					<div class="btn-group">
+						<button id="action" class='js-record btn btn-danger'>Record</button>
+						<button class='btn btn-dark js-stop'">Stop Recording</button>
+					</div>
+				</div>
       </div>
-    </di>
-		</div>
+    </div>
 	</main>
 	<script>
 		// You can also require other files to run in this process
