@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Moi Cast</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style>
+		.video-frame {
+			width: 500px;
+			height: 289px;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<div class="contianer">
+			<div class="row justify-content-center my-4">
+				<div class="video-frame">
+					<video controls class="w-100 h-100"></video>
+				</div>
+				<div class="video-frame">
+					<video class="js-video w-100 h-100" controls></video>
+				</div>
+			</div>
+			<!-- Buttons -->
+			<div class="row">
+				<div class="btn-group mx-auto">
+					<button id="action" class='js-record btn btn-danger'>Record</button>
+					<button class='btn btn-default js-stop'">Stop Recording</button>
+      </div>
+    </di>
+		</div>
+	</main>
+	<script>
+		// You can also require other files to run in this process
+      require('./renderer.js')
+	</script>
+	<script src="./renderer.js"></script>
+</body>
+
+</html>
