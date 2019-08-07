@@ -7,10 +7,16 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="./css/style.css"/>
 	<style>
+	html,
+	body{
+		height:100%;
+		overflow:hidden
+	}
 		.video-frame {
-			width: 500px;
-			height: 289px;
+			width: 475px;
+			height: 275px;
 		}
 	</style>
 </head>
@@ -37,9 +43,9 @@
 	</main>
 	<script>
 		// You can also require other files to run in this process
-      require('./renderer.js')
+      require('../src/renderer.js')
 	</script>
-	<script src="./renderer.js"></script>
+
 </body>
 
 </html>

@@ -9,15 +9,15 @@ function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 1256,
-    height: 800,
+    minHeight: 800,
+	minWidth:992,
     webPreferences: {
       nodeIntegration: true
     }
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
-
+  mainWindow.loadFile('public/index.html')
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 
