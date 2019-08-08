@@ -1,20 +1,13 @@
+const rules = require('./webpack.rules');
+
+rules.push({
+  test: /\.css$/,
+  use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+});
+
 module.exports = {
-  modules: {
-    rules: [
-      {
-        test: /\.node$/,
-        use: 'node-loader',
-      },
-      {
-        test: /\.(m?js|node)$/,
-        parser: { amd: false },
-        use: {
-          loader: '@marshallofsound/webpack-asset-relocator-loader',
-          options: {
-            outputAssetBase: 'native_modules',
-          },
-        },
-      },
-    ]
-  }
-}
+  // Put your normal webpack config below here
+  module: {
+    rules,
+  },
+};

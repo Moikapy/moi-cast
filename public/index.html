@@ -8,23 +8,12 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link href="./css/style.css"/>
-	<style>
-	html,
-	body{
-		height:100%;
-		overflow:hidden
-	}
-		.video-frame {
-			width: 475px;
-			height: 275px;
-		}
-	</style>
 </head>
 
 <body>
 	<main>
-		<div class="contianer">
-			<div class="row video-container justify-content-center my-4">
+		<div class="contianer video-container mx-auto">
+			<div class="row  justify-content-center my-4">
 				<div class="video-frame mx-2 border border-dark">
 					<video controls class="w-100 h-100"></video>
 				</div>
@@ -35,9 +24,18 @@
 			<!-- Buttons -->
 			<div class="row">
 				<div class=" mx-auto">
-					<div class="input-group mb-3">
+					<div class="input-group d-flex flex-column mb-3">
 						<div class="input-group-text">
-							<input type="checkbox" onclick="checkDesktop()" aria-label="Checkbox for following text input">
+							<input type="checkbox" class="js-checkbox-audio" aria-label="Checkbox for following text input">
+							<p class="mx-auto my-0"> AUDIO</p>
+						</div>
+						<div class="input-group-text">
+							<input type="checkbox" class="js-checkbox-video" aria-label="Checkbox for following text input">
+							<p class="mx-auto my-0"> VIDEO</p>
+						</div>
+						<div class="input-group-text">
+							<input type="checkbox" class="js-checkbox-desktop" aria-label="Checkbox for following text input">
+							<p class="mx-auto my-0"> DESKTOP</p>
 						</div>
 					</div>
 					<div class="btn-group">
@@ -48,11 +46,6 @@
       </div>
     </div>
 	</main>
-	<script>
-		// You can also require other files to run in this process
-      require('../src/renderer.js')
-	</script>
-
 </body>
 
 </html>

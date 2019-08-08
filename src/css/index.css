@@ -1,0 +1,12 @@
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+.video-container {
+	max-width: 1100px;
+}
+.video-frame {
+	width: 500px;
+	height: 289px;
+}

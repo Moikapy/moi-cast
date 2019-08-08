@@ -1,20 +1,11 @@
 module.exports = {
-  modules: {
-    rules: [
-      {
-        test: /\.node$/,
-        use: 'node-loader',
-      },
-      {
-        test: /\.(m?js|node)$/,
-        parser: { amd: false },
-        use: {
-          loader: '@marshallofsound/webpack-asset-relocator-loader',
-          options: {
-            outputAssetBase: 'native_modules',
-          },
-        },
-      },
-    ]
-  }
-}
+  /**
+   * This is the main entry point for your application, it's the first file
+   * that runs in the main process.
+   */
+  entry: './electron/main.js',
+  // Put your normal webpack config below here
+  module: {
+    rules: require('./webpack.rules'),
+  },
+};
