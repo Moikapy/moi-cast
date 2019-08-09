@@ -1,4 +1,4 @@
-const isOldBrowser = () => {
+const isOldBrowser = (constraintObj) => {
 	//handle older browsers that might implement getUserMedia in some way
 	if (navigator.mediaDevices === undefined) {
 		navigator.mediaDevices = {};
@@ -31,7 +31,7 @@ const isOldBrowser = () => {
 
 }
 
-const isOldBrowserDesktop = () => {
+const isOldBrowserDesktop = (constraintObj) => {
 	//handle older browsers that might implement getUserMedia in some way
 	if (navigator.mediaDevices === undefined) {
 		navigator.mediaDevices = {};
