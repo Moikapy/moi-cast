@@ -1,7 +1,7 @@
 {
   "name": "moi-cast",
-  "productName": "Moi Cast",
-  "version": "0.0.0",
+  "productName": "Moi-Cast",
+  "version": "0.0.1",
   "description": "Video Creation tool",
   "main": ".webpack/main",
   "scripts": {
