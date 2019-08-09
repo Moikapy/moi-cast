@@ -2,11 +2,12 @@ html,
 body {
 	height: 100%;
 	overflow: hidden;
-	background-color: #eee
+	background-color: #eee;
 }
 .video-container {
 	max-width: 1100px;
 	height: 288.98px;
+	background-color: black
 }
 .video-frame {
 	width: 475px;

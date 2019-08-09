@@ -80,11 +80,11 @@ const Core = async (audio, video, desktop) => {
 					}
 
 					video.onloadedmetadata = (ev) => {
-            //show in the video element what is being captured by the webcam
-            video.defaultMuted = true;
-						setTimeout(()=>{
-              video.play();
-            },100)
+						//show in the video element what is being captured by the webcam
+						video.defaultMuted = true;
+						setTimeout(() => {
+							video.play();
+						}, 100);
 					};
 
 					//add listeners for saving video/audio

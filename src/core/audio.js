@@ -1,9 +1,9 @@
 import { isOldBrowser } from '../util/isOldBrowser';
 export default class Audio {
 	init() {
-		isOldBrowser({audio:true})
+		isOldBrowser({ audio: true });
 		navigator.mediaDevices
-			.getUserMedia({audio:true})
+			.getUserMedia({ audio: true })
 			.then((mediaStreamObj) => {
 				//add listeners for saving video/audio
 				let start = document.querySelector('.js-record');
