@@ -1,11 +1,10 @@
 {
   "name": "moi-cast",
   "productName": "Moi Cast",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Video Creation tool",
   "main": ".webpack/main",
-  "scripts":
-  {
+  "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
@@ -13,68 +12,62 @@
     "lint": "echo \"No linting configured\""
   },
   "keywords": [],
-  "author":
-  {
+  "author": {
     "name": "Warren Gates",
     "email": "warrenckhan@gmail.com"
   },
   "license": "MIT",
-  "config":
-  {
-    "forge":
-    {
-      "packagerConfig":
-      {},
+  "config": {
+    "forge": {
+      "packagerConfig": {},
       "makers": [
-      {
-        "name": "@electron-forge/maker-squirrel",
-        "config":
         {
-          "name": "moi_cast"
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "moi_cast"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
         }
-      },
-      {
-        "name": "@electron-forge/maker-zip",
-        "platforms": [
-          "darwin"
-        ]
-      },
-      {
-        "name": "@electron-forge/maker-deb",
-        "config":
-        {}
-      },
-      {
-        "name": "@electron-forge/maker-rpm",
-        "config":
-        {}
-      }],
+      ],
       "plugins": [
         [
           "@electron-forge/plugin-webpack",
           {
             "mainConfig": "./webpack.main.config.js",
-            "renderer":
-            {
+            "renderer": {
               "config": "./webpack.renderer.config.js",
               "entryPoints": [
-              {
-                "html": "./public/index.html",
-                "js": "./electron/renderer.js",
-                "name": "main_window"
-              }]
+                {
+                  "html": "./public/index.html",
+                  "js": "./electron/renderer.js",
+                  "name": "main_window"
+                }
+              ]
             }
           }
         ]
       ]
     }
   },
-  "dependencies":
-  {
-    "electron-squirrel-startup": "^1.0.0"
+  "dependencies": {
+    "electron-log": "^3.0.7",
+    "electron-squirrel-startup": "^1.0.0",
+    "update-electron-app": "^1.5.0"
   },
-  "devDependencies":
-  {
+  "devDependencies": {
     "@electron-forge/cli": "6.0.0-beta.43",
     "@electron-forge/maker-deb": "6.0.0-beta.43",
     "@electron-forge/maker-rpm": "6.0.0-beta.43",
