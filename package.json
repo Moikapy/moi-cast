@@ -1,7 +1,7 @@
 {
   "name": "moi-cast",
   "productName": "Moi Cast",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Video Creation tool",
   "main": ".webpack/main",
   "scripts": {
@@ -52,7 +52,7 @@
               "entryPoints": [
                 {
                   "html": "./public/index.html",
-                  "js": "./src/renderer.js",
+                  "js": "./electron/renderer.js",
                   "name": "main_window"
                 }
               ]
@@ -63,7 +63,9 @@
     }
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-log": "^3.0.7",
+    "electron-squirrel-startup": "^1.0.0",
+    "update-electron-app": "^1.5.0"
   },
   "devDependencies": {
     "@electron-forge/cli": "6.0.0-beta.43",
