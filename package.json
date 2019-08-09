@@ -4,8 +4,7 @@
   "version": "0.0.2",
   "description": "Video Creation tool",
   "main": ".webpack/main",
-  "scripts":
-  {
+  "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
@@ -13,8 +12,7 @@
     "lint": "echo \"No linting configured\""
   },
   "keywords": [],
-  "author":
-  {
+  "author": {
     "name": "Warren Gates",
     "email": "warrenckhan@gmail.com"
   },
@@ -27,9 +25,6 @@
       },
       "packagerConfig": {},
       "makers": [
-      {
-        "name": "@electron-forge/maker-squirrel",
-        "config":
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
@@ -50,30 +45,13 @@
           "name": "@electron-forge/maker-rpm",
           "config": {}
         }
-      },
-      {
-        "name": "@electron-forge/maker-zip",
-        "platforms": [
-          "darwin"
-        ]
-      },
-      {
-        "name": "@electron-forge/maker-deb",
-        "config":
-        {}
-      },
-      {
-        "name": "@electron-forge/maker-rpm",
-        "config":
-        {}
-      }],
+      ],
       "plugins": [
         [
           "@electron-forge/plugin-webpack",
           {
             "mainConfig": "./webpack.main.config.js",
-            "renderer":
-            {
+            "renderer": {
               "config": "./webpack.renderer.config.js",
               "entryPoints": [
                 {
@@ -106,8 +84,7 @@
     "update-electron-app": "^1.5.0",
     "electron-compile": "^6.4.4"
   },
-  "devDependencies":
-  {
+  "devDependencies": {
     "@electron-forge/cli": "6.0.0-beta.43",
     "@electron-forge/maker-deb": "6.0.0-beta.43",
     "@electron-forge/maker-rpm": "6.0.0-beta.43",
