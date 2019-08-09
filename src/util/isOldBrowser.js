@@ -27,8 +27,6 @@ const isOldBrowser = (constraintObj) => {
 	}
 };
 
-}
-
 const isOldBrowserDesktop = (constraintObj) => {
 	//handle older browsers that might implement getUserMedia in some way
 	if (navigator.mediaDevices === undefined) {
